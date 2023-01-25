@@ -7,12 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is login page</h1>
-    <p>{{user.username}}</p>
-
-    <form method="post" action="{% url 'users:login' %}">
+    <form method="POST" action="{% url 'users:signup' %}">
         {% csrf_token %}
-        {% include 'users/form_errors.html' %}
         <div>
             <label>user ID</label>
             <input type="text" name="username" id="username">
@@ -21,7 +17,11 @@
             <label>password</label>
             <input type="text" name="password" id="password">
         </div>
-        <button type="submit">LOGIN</button>
+        <div>
+            <label>confirm</label>
+            <input type="text" name="confirm" id="comfirm">
+        </div>
+        <button type="submit">SIGN UP</button>
     </form>
 </body>
 </html>

@@ -3,5 +3,5 @@ from django.contrib import admin
 
 app_name="accounts"
 urlpatterns=[
-    path('admin/')
+    #path('admin/')
 ]
