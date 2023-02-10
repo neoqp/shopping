@@ -4,7 +4,7 @@ from django.http import *
 # Create your views here.
 
 def index(request):
-    return render(request, 'polls/index.html')
+    return render(request, 'base.html')
 
 def create(request):
     return render(request, 'polls/create.html')
