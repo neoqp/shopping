@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <body>
-        {%for obj in reviews.all%}
-        <h1>TITLE : {{obj.title}}</h1>
-        <p>BODY :{{obj.body}}</p>
-        <p>DATE: {{obj.date}}</p>
-        {%endfor%}
-    </body>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+{%for obj in reviews.all%}
+<li>TITLE : {{obj.title}}</li>
+{%endfor%}
+{% endblock %}
