@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#4g!4s+bl_ycg1&caui2#rf0_w2$8_$g+xbx#+fylcstz264^r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,13 +75,15 @@ WSGI_APPLICATION = 'shoppingmall.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+import pymysql
 
+pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'test',
-        'USER': 'root',
-        'PASSWORD': '1234',
+        'USER': 'saneo',
+        'PASSWORD': 'eodus6450',
         'HOST': 'localhost',
         'PORT': '3306',
     }
